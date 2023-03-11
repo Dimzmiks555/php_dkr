@@ -1,9 +1,9 @@
 import React from 'react'
 import s from './List.module.css'
 
-const List = ({children}) => {
+const List = ({children, direction}) => {
   return (
-    <div className={s.list}>{children}</div>
+    <div className={direction === 'row' ? s.list_row: s.list}>{children}</div>
   )
 }
 

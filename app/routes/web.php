@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Models\Book;
+use App\Models\CartItem;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -29,7 +30,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
         'books' => $books
     ]);
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
 
@@ -48,7 +49,13 @@ Route::get('/create_book', function () {
 
 
 Route::get('/cart', function () {
-    return Inertia::render('CreateBook');
+
+    $books = CartItem::with('book')->get();
+
+
+    return Inertia::render('Cart', [
+        'books' => $books
+    ]);
 })->name('cart');
 
 
