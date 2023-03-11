@@ -1,0 +1,38 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+.card img {
+    margin-bottom: 30px;
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+}
+
+.card h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.card h4{
+    color: purple;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 32px;
+}
+
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
