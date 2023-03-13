@@ -73,6 +73,7 @@ class CartItemController extends Controller
         
         $id = $request->input('cart_item_id');
 
+        
 
         $res=CartItem::where('id', $id)->delete();
 
